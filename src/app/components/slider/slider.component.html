@@ -1,0 +1,8 @@
+<div class="slider-container" #sliderContainer (mouseleave)="onDragEnd()" (touchend)="onDragEnd()">
+    <div class="slider-track" #sliderTrack>
+      <div class="slider-item" *ngFor="let item of items; let i = index">
+        <img src="{{ item.image }}" alt="Image">
+        <span>{{i+1}}</span>
+      </div>
+    </div>
+  </div>

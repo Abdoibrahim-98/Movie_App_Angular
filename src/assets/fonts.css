@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins/Poppins-Regular.ttf') format('truetype');
+    /* Add additional src lines for other font weights or formats if needed */
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    /* Add additional src lines for other font weights or formats if needed */
+    font-weight: normal;
+    font-style: normal;
+}

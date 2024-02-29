@@ -1,0 +1,154 @@
+.home-container{
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box !important ;
+    position: relative;
+}
+
+h5{
+    margin: 15% 0 0 8%;
+}
+
+.search-section{
+    height: 18%;
+    box-sizing: border-box;
+    padding-top: 1px;
+}
+/* Styles for the search container */
+.search-container {
+  position: relative;
+  display: inline-block;
+  width: 90%;
+  height: 30%;
+  margin: 5% 0 0 7%;
+}
+
+.search-input {
+  padding: 10px 30px 10px 10px; /* Add padding for the icon */
+  width: 95%;
+  height: 100%;
+  border: 2px solid #494C53;
+  background-color: #494C53;
+  border-radius: 15px;
+  outline: none;
+  color: #fff; /* Set text color to white */
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  right: 12%;
+  transform: translateY(-50%) scaleX(-1);
+  color: #b3b3b3; /* Set the color of the icon */
+}
+
+  .search-input::placeholder {
+    color: #626368; /* Change to the color you want */
+  }
+
+  .slider-section{
+    height: 32%;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-section{
+    height: 50%;
+    box-sizing: border-box;
+  }
+  nav {
+    color: white;
+  }
+  
+  nav ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-around; 
+  }
+  
+  
+  nav ul li a {
+    color: white;
+    font-size: 65%;
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 10px;
+    cursor: pointer;
+  }
+
+  nav ul li a:hover{
+    border-bottom: 3px solid #3A3F47; 
+    transition: border-color 0.3s; 
+  }     
+
+  .active{
+    border-bottom: 3px solid #3A3F47;
+  }
+
+
+  .picture-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-height: 82%;
+    overflow-y: auto;
+    z-index: -1;
+    margin: 10% 5% 0 5%;
+    
+}
+
+.picture-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.picture {
+    flex: 0 0 calc(33.33% - 10px); 
+    margin-bottom: 20px;
+    
+}
+
+.picture img {
+    width: 100%;
+    height: auto;
+    border-radius: 10%;
+}
+
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: #242A32;
+  color: white;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  z-index: 100;
+  border-top: 1.5px solid #0296E5;
+}
+
+.footer-item {
+  text-align: center;
+  cursor: pointer;
+}
+
+.footer-item svg {
+  height: 45%;
+  
+}
+
+.footer-item span {
+  display: block;
+  font-size: 60%;  
+  color: #67686D;
+}
+
+.footer-item:hover span,
+.footer-item:hover svg path,
+.footer-item:hover svg ellipse {
+    color: #0296E5 ; /* Change text color */
+    stroke: #0296E5 ; /* Change SVG fill color */
+}
