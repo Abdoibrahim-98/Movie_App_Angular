@@ -8,6 +8,7 @@ import { SliderComponent } from './components/slider/slider.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SearchComponent } from './components/search/search.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { WatchListComponent } from './components/watch-list/watch-list.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { FooterComponent } from './components/footer/footer.component';
     SliderComponent,
     SearchComponent,
     FooterComponent,
+    WatchListComponent,
   ],
   imports: [
     BrowserModule,
