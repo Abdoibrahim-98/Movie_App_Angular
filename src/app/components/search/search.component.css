@@ -1,0 +1,122 @@
+.search-container{
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.header-section{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12% 4% 0 4%;
+}
+
+.header-section span{
+    padding-bottom: 2%;
+    user-select: none;
+}
+
+.search-bar-section{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.search-container {
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+}
+  
+  .search-input {
+    padding: 10px 30px 10px 10px; /* Add padding for the icon */
+    width: 90%;
+    height: 60%;
+    border: 2px solid #494C53;
+    background-color: #494C53;
+    border-radius: 15px;
+    outline: none;
+    color: #fff; /* Set text color to white */
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  
+  .search-icon {
+    position: absolute;
+    top: 50%;
+    right: 12%;
+    transform: translateY(-50%) scaleX(-1);
+    color: #b3b3b3; /* Set the color of the icon */
+  }
+  
+    .search-input::placeholder {
+      color: #626368; /* Change to the color you want */
+    }
+
+.search-result-section{
+    width: 100%;
+    height: 70%;
+    overflow: scroll;
+}
+.search-result-section::-webkit-scrollbar{
+    visibility: hidden;
+}
+
+.movie-cart{
+    height: 25%;
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-left: 5%;
+    margin-bottom: 3%;
+}
+
+.img-section{
+    height: 100%;
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.img-section img{
+    height: 90%;
+    width: 90%;
+    max-height: 90%;
+    max-width: 90%;
+    border-radius: 10%;
+}
+
+
+.details-section{
+    height: 90%;
+    width: 70%;
+   display: flex;
+   flex-direction: column;
+}
+
+.details-section .name{
+    height: 20%;
+    font-size: smaller !important;
+    margin-bottom: 7%;
+}
+.size{
+    height: 17%;
+    display: flex;
+    align-items: center;
+}
+
+.size span{
+    font-size: 70%;
+}
+
+.size svg{
+    height: 80%;
+}
+

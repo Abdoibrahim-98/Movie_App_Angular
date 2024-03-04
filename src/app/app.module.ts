@@ -6,6 +6,8 @@ import { HomeComponent } from './components/home/home.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { AppRoutingModule } from './app-routing.module';
+import { SearchComponent } from './components/search/search.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -13,6 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
     HomeComponent,
     LoadingComponent,
     SliderComponent,
+    SearchComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
