@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SearchComponent } from './components/search/search.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WatchListComponent } from './components/watch-list/watch-list.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { WatchListComponent } from './components/watch-list/watch-list.component
     SearchComponent,
     FooterComponent,
     WatchListComponent,
+    MovieDetailsComponent,
   ],
   imports: [
     BrowserModule,
