@@ -4,3 +4,10 @@
     height: 609px;
     color: white;
 }
+
+@media (max-width: 1024px) {
+    .main-container {
+        width: 100vw;
+        height: 100vh;
+    }
+}

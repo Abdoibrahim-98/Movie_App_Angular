@@ -1,4 +1,4 @@
-import { Component, ElementRef, viewChild } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-movie-details',
@@ -8,6 +8,8 @@ import { Component, ElementRef, viewChild } from '@angular/core';
 export class MovieDetailsComponent {
   selectedApi:string = 'cast';
   saved: Boolean = false;
+  sliderValue: number = 5; 
+  rateClicked: Boolean = false;
   items = [
     { image: 'https://nypost.com/wp-content/uploads/sites/2/2023/05/NYPICHPDPICT000011560165.jpg' },
     { image: 'https://nypost.com/wp-content/uploads/sites/2/2023/05/NYPICHPDPICT000011560165.jpg' },
@@ -23,8 +25,21 @@ export class MovieDetailsComponent {
     // Add more items as needed
   ];
 
-  onClick(event: Event){
+  onClick(event: Event) {
     event.preventDefault();
     this.saved = !this.saved;
   }
+
+  onRateClick() {
+    this.rateClicked = true;
+  }
+
+  onOkClicked() {
+    this.rateClicked = false;
+  }
+
+  getSliderBarWidth(): string {
+    return `calc(${this.sliderValue * 7.5}% - 20px)`;
+  }
+
 }

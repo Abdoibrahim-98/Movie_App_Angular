@@ -10,6 +10,8 @@ import { SearchComponent } from './components/search/search.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WatchListComponent } from './components/watch-list/watch-list.component';
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { MovieDetailsComponent } from './components/movie-details/movie-details.
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    HttpClientModule, 
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
