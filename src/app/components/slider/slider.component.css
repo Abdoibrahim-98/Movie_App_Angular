@@ -3,37 +3,46 @@
     width: 90%; /* Set the width of the visible portion (2 items at a time) */
     margin-left: 5%;
     height: 100%;
+    padding: 8px;
+    margin-top: 1%;
   }
   
   .slider-track {
     display: flex;
     transition: transform 0.3s ease;
+    height: 100%;
+    width: 100%;
+   
   }
   
   .slider-item {
     flex: 0 0 calc(100% / 2); /* Display 2 items at a time */
+    height: auto;
     display: flex;
     height: 100%;
     user-select: none;
     position: relative;
-    padding: 1px;
+    padding: 10px 10px 20px 10px; /* Add padding to create space between images */
+    box-sizing: border-box; 
   }
+
+
   
   .slider-item img {
     flex: 1; /* Each image takes half of the item's width */
     box-sizing: border-box;
-    border-radius: 25px;
-    padding: 10px;
-    object-fit: contain; /* Fit the image inside the container */
+    border-radius: 15px;
+    object-fit:fill; /* Fit the image inside the container */
     max-width: 100%; /* Set maximum width to 100% of the container */
     max-height: 100%; /* Set maximum height to 100% of the container */
     user-select: none;
+    
   }
 
-  .slider-item span{
+  .slider-item p{
     position: absolute;
-    bottom: -10%;
-    font-size: 450%; 
+    bottom: -5%;
+    font-size: 400%; 
     font-family: 'Montserrat';
     font-weight: bolder;
     font-stretch: extra-expanded;
