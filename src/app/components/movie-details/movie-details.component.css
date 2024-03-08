@@ -111,8 +111,8 @@
     white-space: nowrap;
 }
 .movie-details svg{
-    height: 12px;
-    width: 12px;
+    height: 15px;
+    width: 15px;
 }
 
 .nav-section{
@@ -145,16 +145,16 @@
   }
 
   nav ul li a:hover{
-    border-bottom: 3px solid #3A3F47; 
-    transition: border-color 0.3s; 
+    border-bottom: 4px solid #3A3F47;  
   }     
 
   .active{
-    border-bottom: 3px solid #3A3F47;
+    border-bottom: 4px solid #3A3F47;
   }
 
   .content-grid{
-    height: 80%;
+    padding-top:3% ;
+    height: 90%;
     width: 100%;
   }
 
@@ -164,10 +164,15 @@
     display: flex;
     justify-content: center;
     padding: 5% 9%;
+    overflow-y: scroll;
+  }
+
+  .description::-webkit-scrollbar{
+    visibility: hidden;
   }
 
   .description p{
-    font-size: 100%;
+    font-size: 70%;
   }
 
   .reviews{
@@ -184,11 +189,10 @@
   }
 
   .review-element{
-    height: 40%;
     width: 100%;
     display: flex;
     justify-content: center;
-    margin-bottom: 1%;
+    margin-bottom: 20px;
   }
 
   .user-img-rating{
@@ -207,7 +211,7 @@
     object-fit: contain;
   }
   .user-img-rating p{
-    font-size: 100%;
+    font-size: 90%;
     color: #0296E5;
     text-align: center;
   }
@@ -221,13 +225,13 @@
   }
 
   .user-comment p{
-    font-size: x-small;
+    font-size: 60%;
   }
 
 
  @media (max-width: 1024px) {
   .user-comment p{
-    font-size: 90%;
+    font-size: 60%;
   }
   .actor-name p{
     font-size: 90%;
@@ -263,25 +267,14 @@ nav ul li a {
     }
 
     .actor {
-        height: 45%;
+        height: auto;
         width: 50%;
         flex: 0 0 calc(50% - 10px);
         margin-bottom: 5%; 
     }
 
-    @media (min-width: 360px) and (max-width: 767px) {
-      .actor {
-        height: 60%;
-      }
-  }
-    @media (min-width: 767px) and (max-width: 1024px) {
-      .actor {
-        height: 80%;
-      }
-  }
-
-
     .actor-img{
+        padding: 5% 0 0%;
         height: 85%;
         width: 100%;
         position: relative;
@@ -372,6 +365,7 @@ nav ul li a {
         visibility: hidden;
       }
     }
+    
     .slider {
       --range:#FF8700;
       height: 40%;

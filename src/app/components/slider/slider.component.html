@@ -1,6 +1,6 @@
-<div class="slider-container" #sliderContainer (mouseleave)="onDragEnd()" (touchend)="onDragEnd()">
-    <div class="slider-track" #sliderTrack>
-      <div class="slider-item" *ngFor="let item of items; let i = index">
+<div class="slider-container">
+    <div class="slider-track">
+      <div [routerLink]="'/movie-details'" routerLinkActive="active" class="slider-item" *ngFor="let item of items; let i = index">
         <img src="{{ item.image }}" alt="Image">
         <p>{{i+1}}</p>
       </div>

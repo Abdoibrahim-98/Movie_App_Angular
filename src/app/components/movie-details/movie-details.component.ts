@@ -6,7 +6,7 @@ import { Component} from '@angular/core';
   styleUrl: './movie-details.component.css'
 })
 export class MovieDetailsComponent {
-  selectedApi:string = 'cast';
+  selectedApi:string = 'about';
   saved: Boolean = false;
   sliderValue: number = 5; 
   rateClicked: Boolean = false;

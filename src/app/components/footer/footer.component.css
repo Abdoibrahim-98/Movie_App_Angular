@@ -35,3 +35,10 @@
       color: #0296E5 ; /* Change text color */
       stroke: #0296E5 ; /* Change SVG fill color */
   }
+
+  .active span,
+  .active svg path,
+  .active svg ellipse{
+    color: #0296E5 ; /* Change text color */
+    stroke: #0296E5 ; /* Change SVG fill color */
+  }

@@ -1,10 +1,15 @@
 .slider-container {
     overflow: hidden;
+    overflow-x: auto;
     width: 90%; /* Set the width of the visible portion (2 items at a time) */
     margin-left: 5%;
     height: 100%;
     padding: 8px;
     margin-top: 1%;
+  }
+
+  .slider-container::-webkit-scrollbar{
+    visibility: hidden;
   }
   
   .slider-track {

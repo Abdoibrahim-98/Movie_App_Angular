@@ -68,7 +68,7 @@
 }
 
 .movie-cart{
-    height: 25%;
+    height: 120px;
     width: 90%;
     display: flex;
     align-items: center;
@@ -79,7 +79,7 @@
 
 .img-section{
     height: 100%;
-    width: 30%;
+    width: 35%;
     display: flex;
     align-items: center;
     justify-content: center;

@@ -5,7 +5,7 @@
             <p>Rate this movie</p>
             <p class="rate-value">{{ sliderValue }}.0</p>
             <div class="rating-slider">
-                <div class="rating-bar" [style.width]="getSliderBarWidth()" #ratingBar></div>
+                <!-- <div class="rating-bar" [style.width]="getSliderBarWidth()" #ratingBar></div> -->
                 <input type="range" min="1" max="10" [(ngModel)]="sliderValue" class="slider">
             </div>
             <div class="ok-btn-section">
@@ -14,7 +14,7 @@
             </div>
     </div>
     <div class="header-section">
-        <a href=""><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <a routerLink="/"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M20.6809 25.5C20.515 25.5 20.3492 25.4394 20.2182 25.3097L14.5272 19.6687C13.602 18.7516 13.602 17.2462 14.5272 16.3291L20.2182 10.6882C20.4714 10.4373 20.8903 10.4373 21.1435 10.6882C21.3966 10.9391 21.3966 11.3544 21.1435 11.6053L15.4525 17.2462C15.0335 17.6615 15.0335 18.3363 15.4525 18.7516L21.1435 24.3926C21.3966 24.6435 21.3966 25.0588 21.1435 25.3097C21.0125 25.4308 20.8467 25.5 20.6809 25.5Z" fill="white"/>
             </svg>
          </a>
@@ -72,7 +72,7 @@
         <div class="content-grid">
         <ng-container *ngIf="selectedApi === 'about'">
             <div class="description">
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam praesentium consequatur ipsum soluta libero laboriosam provident esse enim voluptates cum.</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Officia, cupiditate facilis hic dolorem ipsa nemo inventore molestiae, sequi minima eveniet esse. A, porro pariatur? Itaque unde quibusdam nihil atque aperiam optio ratione corrupti non. Necessitatibus reiciendis nesciunt excepturi deserunt dolorum molestias est assumenda earum debitis impedit adipisci optio ab sunt fugiat, pariatur sapiente amet maiores mollitia magni omnis? Inventore enim repellat eveniet vero corporis officiis possimus numquam adipisci eum doloremque temporibus reprehenderit, fugit nihil itaque nesciunt vel iure dolorem. Sint iusto voluptate neque necessitatibus. Aperiam id voluptate, necessitatibus repellat voluptas a voluptatem quam ratione, ex fugiat distinctio tempore doloremque dolorem.</p>
             </div>
           </ng-container>
         <ng-container *ngIf="selectedApi === 'reviews'">
@@ -83,7 +83,7 @@
                         <p>6.5</p>
                     </div>
                     <div class="user-comment">
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium voluptate tempore porro aut, hic iure ab facere fugiat sint rem?</p>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint ad suscipit quisquam quos nisi minus, quo nemo dignissimos, quis facilis voluptatem ullam? Aperiam quas eveniet quos perspiciatis inventore laboriosam velit!</p>
                     </div>
                 </div>
                 <div class="review-element">
