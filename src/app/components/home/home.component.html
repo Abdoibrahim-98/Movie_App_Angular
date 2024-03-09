@@ -13,16 +13,16 @@
          <div>
            <nav>
                <ul>
-                   <li><a (click)="selectedApi = 'new-playing'" [ngClass]="{'active': selectedApi === 'new-playing'}">New Playing</a></li>
-                   <li><a (click)="selectedApi = 'upcoming'" [ngClass]="{'active': selectedApi === 'upcoming'}">Upcoming</a></li>
-                   <li><a (click)="selectedApi = 'top-rated'" [ngClass]="{'active': selectedApi === 'top-rated'}">Top Rated</a></li>
-                   <li><a (click)="selectedApi = 'popular'" [ngClass]="{'active': selectedApi === 'popular'}">Popular</a></li>
+                   <li><a (click)="onGetNowPlaying()" [ngClass]="{'active': selectedApi === 'now-playing'}">Now Playing</a></li>
+                   <li><a (click)="onGetUpcoming()" [ngClass]="{'active': selectedApi === 'upcoming'}">Upcoming</a></li>
+                   <li><a (click)="onGetTopRated()" [ngClass]="{'active': selectedApi === 'top-rated'}">Top Rated</a></li>
+                   <li><a (click)="onGetPopular()" [ngClass]="{'active': selectedApi === 'popular'}">Popular</a></li>
                </ul>
            </nav>
          </div> 
         <div class="picture-grid">
-          <div class="picture" *ngFor="let item of items">
-              <img [src]="item.image" alt="Picture">
+          <div class="picture" *ngFor="let movie of movies">
+              <img [src]="movie.poster_path" [alt]="movie.title">
           </div>
     </div>
   </div>
