@@ -1,23 +1,25 @@
-import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { MovieService } from '../../movie.service';
 
 @Component({
   selector: 'app-slider',
   templateUrl: './slider.component.html',
   styleUrls: ['./slider.component.css']
 })
-export class SliderComponent {
+export class SliderComponent implements OnInit {
 
-  items = [
-    { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-    { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-    { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-    { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-    { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-    { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-    // Add more items as needed
-  ];
 
-  constructor(private router: Router){}
+  movies: any[] = [];
+
+  constructor(private movieService: MovieService) {}
+
+  ngOnInit(): void {
+    this.movieService.getPopularMovies().subscribe((data: any ) => {
+      this.movies = data.results.map((movie: any) => ({
+        id: movie.id,
+        poster_path: this.movieService.getMovieImageUrl(movie.poster_path)
+      }));
+    })
+  }
 
 }

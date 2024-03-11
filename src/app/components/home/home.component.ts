@@ -8,23 +8,8 @@ import { MovieService } from '../../movie.service';
   styleUrl: './home.component.css'
 })
 export class HomeComponent implements OnInit {
- selectedApi: string = 'new-playing';
-//  items = [
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   { image: 'https://lumiere-a.akamaihd.net/v1/images/ng_akashinga_laurels_now_url_1adbb20a.jpeg' },
-//   // Add more items as needed
-// ];
+ selectedApi: string;
+
 
   movies: any[];
 
@@ -34,6 +19,7 @@ export class HomeComponent implements OnInit {
     this.selectedApi = 'now-playing';
     this.movieService.getNowPlayingMovies().subscribe((data: any) => {
       this.movies = data.results.map((movie: any) => ({
+        id: movie.id,
         title: movie.title,
         poster_path: this.movieService.getMovieImageUrl(movie.poster_path)
       }));
@@ -44,6 +30,7 @@ export class HomeComponent implements OnInit {
   this.selectedApi = 'popular';
   this.movieService.getPopularMovies().subscribe((data: any) => {
     this.movies = data.results.map((movie: any) => ({
+      id: movie.id,
       title: movie.title,
       poster_path: this.movieService.getMovieImageUrl(movie.poster_path)
     }));
@@ -55,6 +42,7 @@ export class HomeComponent implements OnInit {
   this.selectedApi = 'top-rated';
   this.movieService.getTopRatedMovies().subscribe((data: any) => {
     this.movies = data.results.map((movie: any) => ({
+      id: movie.id,
       title: movie.title,
       poster_path: this.movieService.getMovieImageUrl(movie.poster_path)
     }));
@@ -64,6 +52,7 @@ export class HomeComponent implements OnInit {
   this.selectedApi = 'upcoming';
   this.movieService.getUpcomingMovies().subscribe((data: any) => {
     this.movies = data.results.map((movie: any) => ({
+      id: movie.id,
       title: movie.title,
       poster_path: this.movieService.getMovieImageUrl(movie.poster_path)
     }));
@@ -73,6 +62,7 @@ export class HomeComponent implements OnInit {
   this.selectedApi = 'now-playing';
   this.movieService.getNowPlayingMovies().subscribe((data: any) => {
     this.movies = data.results.map((movie: any) => ({
+      id: movie.id,
       title: movie.title,
       poster_path: this.movieService.getMovieImageUrl(movie.poster_path)
     }));

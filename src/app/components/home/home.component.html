@@ -21,7 +21,7 @@
            </nav>
          </div> 
         <div class="picture-grid">
-          <div class="picture" *ngFor="let movie of movies">
+          <div class="picture" [routerLink]="['/movie-details', movie.id]" *ngFor="let movie of movies">
               <img [src]="movie.poster_path" [alt]="movie.title">
           </div>
     </div>

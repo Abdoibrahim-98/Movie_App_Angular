@@ -1,7 +1,7 @@
 <div class="slider-container">
     <div class="slider-track">
-      <div [routerLink]="'/movie-details'" routerLinkActive="active" class="slider-item" *ngFor="let item of items; let i = index">
-        <img src="{{ item.image }}" alt="Image">
+      <div [routerLink]="['/movie-details', movie.id]" routerLinkActive="active" class="slider-item" *ngFor="let movie of movies; let i = index">
+        <img src="{{ movie.poster_path }}" alt="Image">
         <p>{{i+1}}</p>
       </div>
     </div>
