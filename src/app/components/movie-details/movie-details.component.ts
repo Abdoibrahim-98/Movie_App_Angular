@@ -1,7 +1,10 @@
-  import { Component, OnInit} from '@angular/core';
-  import { ActivatedRoute } from '@angular/router';
-  import { MovieService } from '../../services/movie.service';
-  import { WatchlistService } from '../../services/watchlist.service';
+import { Component, OnInit} from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MovieService } from '../../services/movie.service';
+import { WatchlistService } from '../../services/watchlist.service';
+import { Cast } from '../../models/cast.model';
+import { ReviewResults } from '../../models/review.model';
+import { Movie } from '../../models/movie.model';
 
   @Component({
     selector: 'app-movie-details',
@@ -14,11 +17,11 @@
     sliderValue: number; 
     rateClicked: Boolean = false;
     movieId: number;
-    movie: any;
+    movie: Movie;
     imgUrl: string;
     backdrop_path: string;
-    reviews_info: any[];
-    cast: any[];
+    reviews_info: ReviewResults[];
+    cast: Cast[];
 
     constructor(private route: ActivatedRoute, private movieService: MovieService, private watchlistService: WatchlistService){}
 
@@ -26,6 +29,7 @@
         this.route.paramMap.subscribe(params => {
           this.movieId = Number(params.get('id'));
           this.movieService.getMovieDetails(this.movieId).subscribe(data => {
+            console.log(data);
             this.movie = data;
             this.imgUrl = this.movieService.getMovieImageUrl(data.poster_path);
             this.backdrop_path = this.movieService.getMovieImageUrl(data.backdrop_path);

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from '../../movie.model';
 import { MovieService } from '../../services/movie.service';
+import { MovieListModel } from '../../models/movieList.model';
 
 @Component({
   selector: 'app-home',
@@ -11,7 +11,7 @@ export class HomeComponent implements OnInit {
  selectedApi: string;
 
 
-  movies: any[];
+  movies: MovieListModel[];
 
   constructor(private movieService: MovieService){}
 

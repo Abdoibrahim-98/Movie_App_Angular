@@ -1,6 +1,7 @@
 import { Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import { Movie } from '../../movie.model';
+import { Movie } from '../../models/movie.model';
 import { MovieService } from '../../services/movie.service';
+import { MovieListModel } from '../../models/movieList.model';
 
 @Component({
   selector: 'app-search',
@@ -9,7 +10,7 @@ import { MovieService } from '../../services/movie.service';
 })
 export class SearchComponent implements OnInit{
   @ViewChild('searchInput') searchInputRef!: ElementRef;
-  movies: any[]= [];
+  movies: MovieListModel[]= [];
   query: string = '';
 
   constructor(private movieService: MovieService){}

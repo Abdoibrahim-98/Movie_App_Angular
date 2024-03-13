@@ -39,7 +39,7 @@
         <div class="existed-result-section">
             <div class="movie-cart" [routerLink]="['/movie-details', movie.id]" *ngFor="let movie of movies">
                 <div class="img-section">
-                    <img [src]="movie.poster_path ? 'https://image.tmdb.org/t/p/w200' + movie.poster_path : '../../../assets/pictures/movie.jpg'" alt="">
+                    <img [src]="movie.poster_path ? 'https://image.tmdb.org/t/p/w200' + movie.poster_path : '../../../assets/images/movie.jpg'" alt="">
                 </div>
                 <div class="details-section">
                     <div class="name">

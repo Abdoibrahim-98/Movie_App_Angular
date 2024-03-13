@@ -37,7 +37,7 @@
         </div>
         <div class="img-name">
             <img  [src]="imgUrl" alt="">
-            <p>{{ movie?.original_title || 'N/A' }}</p>
+            <p>{{ movie?.title || 'N/A' }}</p>
         </div>
         <div class="movie-details">
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,7 +79,7 @@
             <div class="reviews">
                 <div class="review-element" *ngFor="let review of reviews_info; let i = index">
                     <div class="user-img-rating">
-                        <img src="../../../assets/pictures/user.png" alt="">
+                        <img src="../../../assets/images/user.png" alt="">
                         <p>{{ reviews_info[i].author_details.rating}}</p>
                     </div>
                     <div class="user-comment">
@@ -92,7 +92,7 @@
             <div class="cast">
                 <div class="actor" *ngFor="let actor of cast">
                     <div class="actor-img">
-                        <img [src]="actor.profile_path ? 'https://image.tmdb.org/t/p/w200' + actor.profile_path : '../../../assets/pictures/user.png'" alt="Picture" alt="Picture">
+                        <img [src]="actor.profile_path ? 'https://image.tmdb.org/t/p/w200' + actor.profile_path : '../../../assets/images/user.png'" alt="Picture" alt="Picture">
                     </div>
                     <div class="actor-name">
                         <p>{{ actor.name }}</p>

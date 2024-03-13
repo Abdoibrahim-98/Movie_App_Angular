@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Movie } from '../../movie.model';
 import { WatchlistService } from '../../services/watchlist.service';
+import { MovieListModel } from '../../models/movieList.model';
 
 @Component({
   selector: 'app-watch-list',
@@ -9,7 +9,7 @@ import { WatchlistService } from '../../services/watchlist.service';
 })
 export class WatchListComponent implements OnInit {
 
-  movies: any[];
+  movies: MovieListModel[];
 
   constructor(private watchlistService: WatchlistService) {}
 
