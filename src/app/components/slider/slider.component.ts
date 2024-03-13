@@ -1,6 +1,6 @@
 import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
-import { MovieService } from '../../services/movie.service';
-import { MovieListModel } from '../../models/movieList.model';
+import { MovieService } from '@services/movie.service';
+import { MovieListModel } from '@models/movieList.model';
 
 @Component({
   selector: 'app-slider',

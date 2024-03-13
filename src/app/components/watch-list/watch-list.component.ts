@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { WatchlistService } from '../../services/watchlist.service';
-import { MovieListModel } from '../../models/movieList.model';
+import { WatchlistService } from '@services/watchlist.service';
+import { MovieListModel } from '@models/movieList.model';
 
 @Component({
   selector: 'app-watch-list',
