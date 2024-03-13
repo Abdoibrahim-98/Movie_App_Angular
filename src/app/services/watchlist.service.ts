@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -37,7 +38,7 @@ export class WatchlistService {
   }
 
   getMovieDuration(movieId: number): Observable<number> {
-    return this.http.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${this.apiKey}`)
+    return this.http.get(`${environment.ROOT_URL}movie/${movieId}?api_key=${this.apiKey}`)
       .pipe(
         map((data: any) => {
           return data.runtime;

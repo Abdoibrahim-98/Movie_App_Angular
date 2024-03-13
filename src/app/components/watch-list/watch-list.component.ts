@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Movie } from '../../movie.model';
-import { WatchlistService } from '../../watchlist.service';
+import { WatchlistService } from '../../services/watchlist.service';
 
 @Component({
   selector: 'app-watch-list',
@@ -10,15 +10,6 @@ import { WatchlistService } from '../../watchlist.service';
 export class WatchListComponent implements OnInit {
 
   movies: any[];
-
-  movieLists: Movie[] = [
-    new Movie('Spiderman','https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/60eca3ac155247e21850c7d075d01ebf0f3f5dbf19ccd2a1.jpg',8.5,'Action',2011,139),
-    new Movie('Spiderman','https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/60eca3ac155247e21850c7d075d01ebf0f3f5dbf19ccd2a1.jpg',8.5,'Action',2011,139),
-    new Movie('Spiderman','https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/60eca3ac155247e21850c7d075d01ebf0f3f5dbf19ccd2a1.jpg',8.5,'Action',2011,139),
-    new Movie('Spiderman','https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/60eca3ac155247e21850c7d075d01ebf0f3f5dbf19ccd2a1.jpg',8.5,'Action',2011,139),
-    new Movie('Spiderman','https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/60eca3ac155247e21850c7d075d01ebf0f3f5dbf19ccd2a1.jpg',8.5,'Action',2011,139),
-    new Movie('Spiderman','https://image.api.playstation.com/vulcan/ap/rnd/202306/1219/60eca3ac155247e21850c7d075d01ebf0f3f5dbf19ccd2a1.jpg',8.5,'Action',2011,139),
-  ];
 
   constructor(private watchlistService: WatchlistService) {}
 
