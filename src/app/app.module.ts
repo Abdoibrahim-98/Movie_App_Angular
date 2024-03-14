@@ -12,6 +12,10 @@ import { WatchListComponent } from './components/watch-list/watch-list.component
 import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { CastComponent } from './components/movie-details/cast/cast.component';
+import { ReviewsComponent } from './components/movie-details/reviews/reviews.component';
+import { DescriptionComponent } from './components/movie-details/description/description.component';
+import { MovieCartComponent } from './components/movie-cart/movie-cart.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +27,10 @@ import { FormsModule } from '@angular/forms';
     FooterComponent,
     WatchListComponent,
     MovieDetailsComponent,
+    CastComponent,
+    ReviewsComponent,
+    DescriptionComponent,
+    MovieCartComponent,
   ],
   imports: [
     BrowserModule,

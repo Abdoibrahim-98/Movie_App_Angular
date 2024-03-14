@@ -10,6 +10,7 @@ import { MovieListModel } from '@models/movieList.model';
 export class WatchListComponent implements OnInit {
 
   movies: MovieListModel[];
+ 
 
   constructor(private watchlistService: WatchlistService) {}
 
@@ -18,11 +19,5 @@ export class WatchListComponent implements OnInit {
     console.log(this.movies);
   }
 
-  formatGenres(genres: any[]): string {
-    if (!genres) {
-      return '';
-    }
-    return genres.slice(0, 2).map(genre => genre.name).join(', ');
-  }
   
 }

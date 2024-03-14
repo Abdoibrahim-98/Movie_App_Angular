@@ -1,17 +1,18 @@
-import { Component, OnInit} from '@angular/core';
+import { Component, OnDestroy, OnInit} from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MovieService } from '@services/movie.service';
 import { WatchlistService } from '@services/watchlist.service';
 import { Cast } from '@models/cast.model';
 import { ReviewResults } from '@models/review.model';
 import { Movie } from '@models/movie.model';
+import { Subscription } from 'rxjs';
 
   @Component({
     selector: 'app-movie-details',
     templateUrl: './movie-details.component.html',
     styleUrl: './movie-details.component.css'
   })
-  export class MovieDetailsComponent implements OnInit {
+  export class MovieDetailsComponent implements OnInit, OnDestroy {
     selectedApi:string = 'about';
     saved: Boolean = false;
     sliderValue: number; 
@@ -22,18 +23,19 @@ import { Movie } from '@models/movie.model';
     backdrop_path: string;
     reviews_info: ReviewResults[];
     cast: Cast[];
-
+    subscription: Subscription;
     constructor(private route: ActivatedRoute, private movieService: MovieService, private watchlistService: WatchlistService){}
 
       ngOnInit(): void {
-        this.route.paramMap.subscribe(params => {
+        this.subscription = this.route.paramMap.subscribe(params => {
           this.movieId = Number(params.get('id'));
           this.movieService.getMovieDetails(this.movieId).subscribe(data => {
             console.log(data);
             this.movie = data;
+            this.movie.genres = data.genres.map((genre: { id: number; name: string; }) => genre.name).slice(0, 1);
             this.imgUrl = this.movieService.getMovieImageUrl(data.poster_path);
             this.backdrop_path = this.movieService.getMovieImageUrl(data.backdrop_path);
-            if(this.watchlistService.isInWatchlist(this.movie)){
+            if(this.watchlistService.isInWatchlist(this.movie.id)){
               this.movie.saved = true;
             } else{
               this.movie.saved = false;
@@ -60,7 +62,7 @@ import { Movie } from '@models/movie.model';
     toggleWatchlist(event: Event) {
       event.preventDefault();
       if (this.movie) {
-        if (this.watchlistService.isInWatchlist(this.movie)) {
+        if (this.watchlistService.isInWatchlist(this.movie.id)) {
           this.watchlistService.removeFromWatchlist(this.movie);
           this.movie.saved = false;
         } else {
@@ -71,8 +73,9 @@ import { Movie } from '@models/movie.model';
     }
 
     get isMovieInWatchlist(): boolean {
-      return this.watchlistService.isInWatchlist(this.movie);
-    }
+      return this.watchlistService.isInWatchlist(this.movie?.id || 0);
+  }
+  
 
     onRatingChange(rating: number) {
       this.movieService.rateMovie(this.movie.id, rating).subscribe(() => {
@@ -103,6 +106,10 @@ import { Movie } from '@models/movie.model';
 
     getFormattedVoteAverage(): string {
       return this.movie?.vote_average.toFixed(1) || 'N/A';
+    }
+
+    ngOnDestroy(): void {
+      this.subscription.unsubscribe();
     }
 
   }

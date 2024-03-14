@@ -21,5 +21,6 @@ export interface MovieRoot {
     vote_average: number;
     vote_count: number;
     duration: number;
+    runtime: number;
     genres: string[];
   }

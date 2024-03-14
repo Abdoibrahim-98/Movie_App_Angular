@@ -9,16 +9,18 @@ import { environment } from '@environments/environment';
 export class WatchlistService {
 
   private watchlist: any[] = [];
-  private apiKey = 'a4ed963f940fd7bf80a96978d9d45480';
 
   constructor(private http: HttpClient) { }
 
   addToWatchlist(movie: any) {
     if (!this.watchlist.some(m => m.id === movie.id)) {
       this.getMovieDuration(movie.id).subscribe(duration => {
-        movie.duration = duration;
-        this.watchlist.push(movie);
+        movie.runtime = duration;
       });
+      this.getMovieGenres(movie.id).subscribe(genres => {
+        movie.genres = genres;
+      });
+      this.watchlist.push(movie);
     }
   }
 
@@ -33,15 +35,25 @@ export class WatchlistService {
     return this.watchlist;
   }
 
-  isInWatchlist(movie: any): boolean {
-    return this.watchlist.some((m) => m && m.id && m.id === movie.id);
-  }
+  isInWatchlist(movieId: number): boolean {
+    return this.watchlist.some(movie => movie.id === movieId);
+}
+
 
   getMovieDuration(movieId: number): Observable<number> {
-    return this.http.get(`${environment.ROOT_URL}movie/${movieId}?api_key=${this.apiKey}`)
+    return this.http.get(`${environment.ROOT_URL}movie/${movieId}?api_key=${environment.apiKey}`)
       .pipe(
         map((data: any) => {
           return data.runtime;
+        })
+      );
+  }
+
+  getMovieGenres(movieId: number): Observable<string[]> {
+    return this.http.get(`${environment.ROOT_URL}movie/${movieId}?api_key=${environment.apiKey}`)
+      .pipe(
+        map((data: any) => {
+          return data.genres.slice(0, 2).map((genre: { id: number; name: string; }) => genre.name);
         })
       );
   }

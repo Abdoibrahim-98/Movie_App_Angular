@@ -1,0 +1,11 @@
+<div class="reviews">
+    <div class="review-element" *ngFor="let review of reviews_info; let i = index">
+        <div class="user-img-rating">
+            <img src="../../../assets/images/user.png" alt="">
+            <p>{{ reviews_info[i].author_details.rating}}</p>
+        </div>
+        <div class="user-comment">
+            <p>{{ reviews_info[i].content }}</p>
+        </div>
+    </div>
+</div>

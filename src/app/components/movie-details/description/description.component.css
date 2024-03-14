@@ -1,0 +1,16 @@
+.description{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5% 9%;
+    overflow-y: scroll;
+  }
+
+  .description::-webkit-scrollbar{
+    visibility: hidden;
+  }
+
+  .description p{
+    font-size: 70%;
+  }

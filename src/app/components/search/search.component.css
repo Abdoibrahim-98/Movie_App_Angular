@@ -67,60 +67,6 @@
     visibility: hidden;
 }
 
-.movie-cart{
-    height: 120px;
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    margin-left: 5%;
-    margin-bottom: 3%;
-    cursor: pointer;
-}
-
-.img-section{
-    height: 100%;
-    width: 35%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.img-section img{
-    height: 90%;
-    width: 90%;
-    max-height: 90%;
-    max-width: 90%;
-    border-radius: 10%;
-}
-
-
-.details-section{
-    height: 90%;
-    width: 70%;
-   display: flex;
-   flex-direction: column;
-}
-
-.details-section .name{
-    height: 20%;
-    font-size: 11px !important;
-    font-weight: bold;
-    margin-bottom: 7%;
-}
-.size{
-    height: 17%;
-    display: flex;
-    align-items: center;
-}
-
-.size span{
-    font-size: 70%;
-}
-
-.size svg{
-    height: 80%;
-}
 
 .not-found{
     display: flex;

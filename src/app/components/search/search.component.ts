@@ -24,7 +24,7 @@ export class SearchComponent implements OnInit{
     if (this.query.trim() !== '') {
       this.movieService.searchMovies(this.query).subscribe(data => {
         this.movies = data.results;
-        console.log(data);
+        console.log(this.movies);
         this.movieService.getMovieGenresForSearchResults(this.movies).subscribe(genres => {
           this.movies.forEach((movie, index) => {
             movie.genres = genres[index]; 
