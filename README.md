@@ -1,27 +1,34 @@
-# MoviesApp
+Movie App
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.1.3.
+A movie application website built with Angular, connected to the TMDB API, allowing users to search for movies, add them to a watchlist, and rate them.
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Features
+Search: Search for movies using keywords.
+Add to Watchlist: Add movies to your watchlist for later viewing.
+Rate Movies: Rate movies and keep track of your ratings.
+Responsive Design: Mobile-friendly design for use on all devices.
+Technologies Used
+Angular
+TypeScript
+HTML/CSS
+TMDB API
+Installation
+Clone the repository: git clone https://github.com/yourusername/movie-app.git
+Install dependencies: npm install
+Run the development server: ng serve
+Usage
+Navigate to the homepage.
+Use the search bar to search for movies.
+Click on a movie to view details, add it to your watchlist, or rate it.
+Navigate to the watchlist page to see your saved movies.
+Have fun exploring and rating movies!
+Contributing
+Contributions are welcome! Please fork the repository and submit a pull request.
 
-## Code scaffolding
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Acknowledgements
+Angular
+TMDB API
