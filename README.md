@@ -37,7 +37,7 @@ A movie application website built with Angular, connected to the TMDB API, allow
 ## Images and Videos
 
 ### Screenshots
-<img src="![home-page](https://github.com/Abdoibrahim-98/Movie_App_Angular/assets/109592393/72033e84-810d-42cc-a100-0b7daa10f863)" alt="Image Description" style="width: 50%; height: auto;">
+<img src="![home-page](https://github.com/Abdoibrahim-98/Movie_App_Angular/assets/109592393/72033e84-810d-42cc-a100-0b7daa10f863)" alt="Image Description" style="width: 100%; height: 250;">
 
 
 
