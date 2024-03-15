@@ -21,7 +21,7 @@ A movie application website built with Angular, connected to the TMDB API, allow
 
 ## Installation
 
-1. Clone the repository: `git clone https://github.com/Abdoibrahim-98/movie-app.git`
+1. Clone the repository: `git clone https://github.com/Abdoibrahim-98/Movie_App_Angular`
 2. Install dependencies: `npm install`
 3. Run the development server: `ng serve`
 
