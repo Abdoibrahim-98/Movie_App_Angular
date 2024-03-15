@@ -52,6 +52,10 @@ A movie application website built with Angular, connected to the TMDB API, allow
 [![Video Thumbnail](http://img.youtube.com/vi/7OU-GSWNqMg/0.jpg)](https://www.youtube.com/watch?v=7OU-GSWNqMg)
 
 
+## Try It From Here (Deployed Version)
+
+- [Movie-app](https://movie-app-angular-lovat.vercel.app/home)
+
 ## Contributing
 
 Contributions are welcome! Please fork the repository and submit a pull request.
