@@ -4,7 +4,6 @@
 
 A movie application website built with Angular, connected to the TMDB API, allowing users to search for movies, add them to a watchlist, and rate them.
 
-![Movie App Screenshot](/path/to/screenshot.png)
 
 ## Features
 
