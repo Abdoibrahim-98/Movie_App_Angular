@@ -34,7 +34,6 @@ export class HomeComponent implements OnInit {
       title: movie.title,
       poster_path: this.movieService.getMovieImageUrl(movie.poster_path)
     }));
-    // console.log(data.results);
   });
  }
 

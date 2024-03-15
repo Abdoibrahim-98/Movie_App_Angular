@@ -30,7 +30,6 @@ import { Subscription } from 'rxjs';
         this.subscription = this.route.paramMap.subscribe(params => {
           this.movieId = Number(params.get('id'));
           this.movieService.getMovieDetails(this.movieId).subscribe(data => {
-            console.log(data);
             this.movie = data;
             this.movie.genres = data.genres.map((genre: { id: number; name: string; }) => genre.name).slice(0, 1);
             this.imgUrl = this.movieService.getMovieImageUrl(data.poster_path);
@@ -54,7 +53,6 @@ import { Subscription } from 'rxjs';
         this.movieService.getSession().subscribe(
           (sessionId: string) => {
             this.movieService.setGuestSessionId(sessionId);
-            console.log('Guest session ID:', sessionId);
           });
       }
 
@@ -64,7 +62,6 @@ import { Subscription } from 'rxjs';
         setInterval(()=>{
           this.getUserRating();
         },1000)
-        console.log('Movie rated successfully');
       });
     }
   
