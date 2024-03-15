@@ -14,7 +14,7 @@ TypeScript
 HTML/CSS
 TMDB API
 Installation
-Clone the repository: git clone https://github.com/yourusername/movie-app.git
+Clone the repository: git clone https://github.com/Abdoibrahim-98/movie-app.git
 Install dependencies: npm install
 Run the development server: ng serve
 Usage
