@@ -76,7 +76,7 @@ A movie application website built with Angular, connected to the TMDB API, allow
 
 ### Demo Video
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/7OU-GSWNqMg" frameborder="0" allowfullscreen></iframe>
+[![Video Thumbnail](http://img.youtube.com/vi/7OU-GSWNqMg/0.jpg)](https://www.youtube.com/watch?v=7OU-GSWNqMg)
 
 
 ## Contributing
