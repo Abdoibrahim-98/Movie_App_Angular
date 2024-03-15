@@ -59,24 +59,6 @@ import { Subscription } from 'rxjs';
       }
 
 
-    toggleWatchlist(event: Event) {
-      event.preventDefault();
-      if (this.movie) {
-        if (this.watchlistService.isInWatchlist(this.movie.id)) {
-          this.watchlistService.removeFromWatchlist(this.movie);
-          this.movie.saved = false;
-        } else {
-          this.watchlistService.addToWatchlist(this.movie);
-          this.movie.saved = true;
-        }
-      }
-    }
-
-    get isMovieInWatchlist(): boolean {
-      return this.watchlistService.isInWatchlist(this.movie?.id || 0);
-  }
-  
-
     onRatingChange(rating: number) {
       this.movieService.rateMovie(this.movie.id, rating).subscribe(() => {
         setInterval(()=>{

@@ -50,6 +50,7 @@
 
   .user-comment p{
     font-size: 60%;
+    max-width: 100%;
   }
 
 

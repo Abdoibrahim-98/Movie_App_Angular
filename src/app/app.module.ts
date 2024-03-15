@@ -16,6 +16,9 @@ import { CastComponent } from './components/movie-details/cast/cast.component';
 import { ReviewsComponent } from './components/movie-details/reviews/reviews.component';
 import { DescriptionComponent } from './components/movie-details/description/description.component';
 import { MovieCartComponent } from './components/movie-cart/movie-cart.component';
+import { EmptySearchComponent } from './components/search/empty-search/empty-search.component';
+import { EmptyWatchListComponent } from './components/watch-list/empty-watch-list/empty-watch-list.component';
+import { HeaderComponent } from './components/header/header.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +34,9 @@ import { MovieCartComponent } from './components/movie-cart/movie-cart.component
     ReviewsComponent,
     DescriptionComponent,
     MovieCartComponent,
+    EmptySearchComponent,
+    EmptyWatchListComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

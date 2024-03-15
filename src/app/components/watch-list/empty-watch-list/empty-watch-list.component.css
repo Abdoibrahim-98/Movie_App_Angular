@@ -1,0 +1,23 @@
+/*empty watch list*/
+.empty-watch-list{
+    width: 100%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 35%;
+}
+
+.empty-watch-list p{
+    text-align: center;
+}
+
+.row1{
+    font-size: 16px;
+}
+
+.row2{
+    font-size: 12px;
+    color: #92929D;
+}
